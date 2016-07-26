@@ -185,7 +185,7 @@ export default function () {
         //
 
         if (t.isBlockStatement(alternate) && !alternate.body.length) {
-          alternate = node.alternate = null;
+         // alternate = node.alternate = null;
         }
 
         // if the consequent block is empty turn alternate blocks into a consequent
@@ -195,9 +195,9 @@ export default function () {
         //
 
         if (t.isBlockStatement(consequent) && !consequent.body.length && t.isBlockStatement(alternate) && alternate.body.length) {
-          node.consequent = node.alternate;
+        /*  node.consequent = node.alternate;
           node.alternate  = null;
-          node.test       = t.unaryExpression("!", test, true);
+          node.test       = t.unaryExpression("!", test, true);*/
         }
       }
     }
